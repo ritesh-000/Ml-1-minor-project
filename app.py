@@ -7,10 +7,20 @@ from fastapi.templating import Jinja2Templates # UI
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 
-app = FastAPI(title="Text Summarizer App", description="Text Summarization using T5", version="1.0")
+# app = FastAPI(title="Text Summarizer App", description="Text Summarization using T5", version="1.0")
 
-model = T5ForConditionalGeneration.from_pretrained("./saved_summary_model")
-tokenizer = T5Tokenizer.from_pretrained("./saved_summary_model")
+# model = T5ForConditionalGeneration.from_pretrained("./saved_summary_model")
+# tokenizer = T5Tokenizer.from_pretrained("./saved_summary_model")
+app = FastAPI(
+    title="Text Summarizer App",
+    description="Text Summarization using T5",
+    version="1.0"
+)
+
+MODEL_NAME = "t5-small"
+
+model = T5ForConditionalGeneration.from_pretrained(MODEL_NAME)
+tokenizer = T5Tokenizer.from_pretrained(MODEL_NAME)
 
 # device
 if torch.backends.mps.is_available():
