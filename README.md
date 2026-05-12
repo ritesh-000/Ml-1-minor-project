@@ -9,7 +9,7 @@ This project takes long text as input and generates a concise summary using the 
 
 https://text-summarizer-3o6z.onrender.com
 
-https://ml-1-minor-project-1.onrender.com
+
 
 ## 📌 Features
 
