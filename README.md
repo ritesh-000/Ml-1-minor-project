@@ -7,7 +7,6 @@ This project takes long text as input and generates a concise summary using the 
 
 ## 🚀 Live Demo
 
-https://text-summarizer-3o6z.onrender.com
 
 
 
